@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "EvoLite"
+version = "0.0.1"
+authors = [{ name = "Bruno Faria", email = "brunofaria@dei.uc.pt" }]
+maintainers = [{ name = "Bruno Faria", email = "brunofaria@dei.uc.pt" }]
+description = "An Evolutionary Approach to Neural Network Compression"
+readme = "README.md"
+license = "LICENSE"
+requires-python = ">=3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["evolutionary", "neural networks", "compression", "optimization"]
+
+[project.urls]
+homepage = "https://github.com/brunofaria1322/EvoLite"
+issues = "https://github.com/brunofaria1322/EvoLite/issues"
