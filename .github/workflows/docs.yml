@@ -24,9 +24,4 @@ jobs:
       - name: Install dependencies
         run: hatch env create docs
       - name: Deploy docs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run:  |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          hatch run docs:deploy
+        run:  hatch run docs:deploy
