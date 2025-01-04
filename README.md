@@ -2,7 +2,7 @@
 
 [![PyPI - Version](https://img.shields.io/pypi/v/evolite.svg)](https://pypi.org/project/evolite)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/evolite.svg)](https://pypi.org/project/evolite)
-
+[![Tests](https://github.com/brunofaria1322/EvoLite/actions/workflows/test.yml/badge.svg)](https://github.com/brunofaria1322/EvoLite/actions/workflows/test.yml)
 ---
 
 EvoLite is an open-source Python library designed to optimize and compress neural networks seamlessly.
