@@ -4,21 +4,44 @@ build-backend = "hatchling.build"
 
 [project]
 name = "EvoLite"
-version = "0.0.1"
+dynamic = ["version"]
+description = "An Evolutionary Approach to Neural Network Compression"
 authors = [{ name = "Bruno Faria", email = "brunofaria@dei.uc.pt" }]
 maintainers = [{ name = "Bruno Faria", email = "brunofaria@dei.uc.pt" }]
-description = "An Evolutionary Approach to Neural Network Compression"
 readme = "README.md"
-license = "LICENSE"
-requires-python = ">=3.13"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.13",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]
+license = "MIT"
+requires-python = ">=3.8"
 keywords = ["evolutionary", "neural networks", "compression", "optimization"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
 
 [project.urls]
-homepage = "https://github.com/brunofaria1322/EvoLite"
-issues = "https://github.com/brunofaria1322/EvoLite/issues"
+Documentation = "https://brunofaria1322.github.io/EvoLite/"
+Issues = "https://github.com/brunofaria1322/EvoLite/issues"
+Source = "https://github.com/brunofaria1322/EvoLite"
+
+[tool.hatch.version]
+path = "src/evolite/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = ["pytest", "pytest-cov"]
+[tool.hatch.envs.default.scripts]
+test = "pytest --cov=evolite tests/"
+
+[tool.hatch.envs.docs]
+dependencies = ["mkdocs", "mkdocs-material"]
+
+[tool.hatch.envs.docs.scripts]
+serve = "mkdocs serve"
+build = "mkdocs build"
+deploy = "mkdocs gh-deploy --force"

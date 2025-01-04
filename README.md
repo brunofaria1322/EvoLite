@@ -1,20 +1,37 @@
 # EvoLite
 
-An Evolutionary Approach to Neural Network Compression
+[![PyPI - Version](https://img.shields.io/pypi/v/evolite.svg)](https://pypi.org/project/evolite)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/evolite.svg)](https://pypi.org/project/evolite)
 
-## Introduction
+---
 
-TODO: Write a proper introduction
-EvoLite is a novel evolutionary approach to compressing neural networks. It is based on the idea of evolving a population of neural networks to find the best possible network that can perform the task at hand. EvoLite is designed to be a lightweight and efficient tool for neural network compression. It is written in Python and uses the DEAP library for evolutionary computation.
+EvoLite is an open-source Python library designed to optimize and compress neural networks seamlessly.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Installation
 
-...
+```console
+pip install evolite
+```
 
 ## Usage
 
-...
+```python
+import evolite
 
-## temp
+# TODO: ...
+```
 
-[python packaging tutorial](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+## Contributing
+
+Contributions are welcome! For bug reports or requests please [submit an issue](https://github.com/brunofaria1322/evolite/issues).
+
+## License
+
+`evolite` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.

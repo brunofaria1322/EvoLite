@@ -1,0 +1,22 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+      - name: Install Hatch
+        run: pip install hatch
+      - name: Install dependencies
+        run: hatch env create docs
+      - name: Deploy docs
+        run: hatch run docs:deploy
