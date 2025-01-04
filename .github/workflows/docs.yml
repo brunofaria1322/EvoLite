@@ -18,5 +18,7 @@ jobs:
         run: pip install hatch
       - name: Install dependencies
         run: hatch env create docs
+      - name: Build docs
+        run: hatch run docs:build
       - name: Deploy docs
         run: hatch run docs:deploy
