@@ -21,4 +21,9 @@ jobs:
       - name: Build docs
         run: hatch run docs:build
       - name: Deploy docs
-        run: hatch run docs:deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run:  |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          hatch run docs:deploy
