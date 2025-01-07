@@ -13,17 +13,14 @@ license = "MIT"
 requires-python = ">=3.8"
 keywords = ["evolutionary", "neural networks", "compression", "optimization"]
 classifiers = [
-  "Development Status :: 4 - Beta",
+  "Development Status :: 2 - Pre-Alpha",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
-  "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
 ]
+dependencies = ["numpy", "torch", "tensorflow", "scikit-learn"]
 
 [project.urls]
 Documentation = "https://brunofaria1322.github.io/EvoLite/"

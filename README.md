@@ -24,9 +24,17 @@ pip install evolite
 ## Usage
 
 ```python
-import evolite
+from evolite import EvoLite
 
-# TODO: ...
+# Load your neural network model and dataset
+model = ... # Your model here
+data = ... # Your data here
+
+# Create an EvoLite instance
+evolite = EvoLite(model, data)
+
+# Compress the model
+compressed_model = evolite.compress()
 ```
 
 ## Contributing

@@ -15,15 +15,18 @@ Welcome to the **EvoLite** library! EvoLite is a Python library designed to mini
 pip install evolite
 ```
 
-## Quick Example
+## Basic Usage
 
 ```python
-from evolite import compress_network
-from evolite.models import CompressibleNetwork
+from evolite import EvoLite
 
-# Load your network
-network = CompressibleNetwork()
+# Load your neural network model and dataset
+model = ... # Your model here
+data = ... # Your data here
 
-# Compress it
-compressed = compress_network(network, target_size=0.5)
+# Create an EvoLite instance
+evolite = EvoLite(model, data)
+
+# Compress the model
+compressed_model = evolite.compress()
 ```
