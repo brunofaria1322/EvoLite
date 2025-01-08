@@ -12,8 +12,7 @@
 - `load_model(model, path)`: Load a PyTorch or TensorFlow model.
 - `validate_dataset(dataset)`: Validate if the dataset is in the expected format.
 
-### Compression Techniques
+### `Pruning`
 
-- `Pruning`: Removes unimportant weights and nodes from the model.
-- `Quantization`: Reduces the precision of the model's weights.
-- etc.
+- `__init__(target, rate)`: Initialize the pruning module.
+- `apply(model)`: Apply pruning to the model.

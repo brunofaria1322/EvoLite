@@ -13,6 +13,12 @@ def test_validate_model():
 
     validate_model(tf_model)  # Should not raise an error
 
+    try:
+        validate_model("invalid_model")
+        assert False, "Expected ValueError"
+    except ValueError:
+        pass
+
 
 def test_validate_dataset():
     class ValidDataset:

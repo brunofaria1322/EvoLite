@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.0.2] - 2025-01-06
+## [0.0.2] - 2025-01-07
 ### Added
 - Core API for EvoLite with basic methods.
 - Model and dataset validation utilities.

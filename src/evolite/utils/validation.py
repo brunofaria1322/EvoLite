@@ -13,6 +13,7 @@ def validate_model(model: torch.nn.Module | tf.keras.Model) -> None:
     Raises:
         ValueError: If the model is not supported.
     """
+
     if not (isinstance(model, torch.nn.Module) or isinstance(model, tf.keras.Model)):
         raise ValueError("Model must be a PyTorch or TensorFlow model.")
 

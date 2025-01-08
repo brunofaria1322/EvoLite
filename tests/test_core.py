@@ -4,6 +4,21 @@ from src.evolite import EvoLite
 import os
 
 
+def test_evolite_init():
+    dataset = [(torch.rand(10), torch.rand(2)) for _ in range(10)]
+    pytorch_model = torch.nn.Linear(10, 2)
+    evo_pytorch = EvoLite(pytorch_model, dataset)
+    assert evo_pytorch.model == pytorch_model
+    assert evo_pytorch.dataset == dataset
+
+    tf_model = tf.keras.Sequential(
+        [tf.keras.layers.Input(shape=(10,)), tf.keras.layers.Dense(2)]
+    )
+    evo_tf = EvoLite(tf_model, dataset)
+    assert evo_tf.model == tf_model
+    assert evo_tf.dataset == dataset
+
+
 def test_evolite_save_load_pytorch(tmp_path):
     dataset = [(torch.rand(10), torch.rand(2)) for _ in range(10)]
 
