@@ -1,11 +1,11 @@
 import torch
-from evolite.compression.pruning import Pruning
-from .utils import LeNet
+from evolite.compression.pytorch.pruning import PyTorchPruning
+from ..utils import LeNet
 
 
-def test_pruning_pytorch_unstructured():
+def test_pytorch_pruning_unstructured():
     model = LeNet()
-    pruning = Pruning(prune_type="unstructured", rate=0.5)
+    pruning = PyTorchPruning(prune_type="unstructured", rate=0.5)
     pruned_model = pruning.apply(model)
     assert isinstance(pruned_model, torch.nn.Module)
 
@@ -20,9 +20,9 @@ def test_pruning_pytorch_unstructured():
     assert num_pruned == 0.5 * num_weights  # Check if 50% weights were pruned
 
 
-def test_pruning_pytorch_structured():
+def test_pytorch_pruning_structured():
     model = LeNet()
-    pruning = Pruning(prune_type="structured", rate=0.5)
+    pruning = PyTorchPruning(prune_type="structured", rate=0.5)
     pruned_model = pruning.apply(model)
     assert isinstance(pruned_model, torch.nn.Module)
 

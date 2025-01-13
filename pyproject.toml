@@ -20,7 +20,7 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
 ]
-dependencies = ["numpy", "torch", "tensorflow", "scikit-learn"]
+dependencies = ["numpy", "torch"]
 
 [project.urls]
 Documentation = "https://brunofaria1322.github.io/EvoLite/"

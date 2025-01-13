@@ -1,13 +1,12 @@
 from typing import Any, Literal
 import torch
-import tensorflow as tf
 from ..utils.model_utils import save_model, load_model
 from ..utils.validation import validate_model, validate_dataset
 from ..compression.pruning import Pruning
 
 
 class EvoLite:
-    def __init__(self, model: torch.nn.Module | tf.keras.Model, dataset: Any) -> None:
+    def __init__(self, model: torch.nn.Module, dataset: Any) -> None:
         """
         Initialize EvoLite with a model and dataset.
 
@@ -15,13 +14,12 @@ class EvoLite:
             model: A PyTorch or TensorFlow model.
             dataset: A dataset for validation/testing.
         """
-        framework = validate_model(model)
+        validate_model(model)
         validate_dataset(dataset)
         self.model = model
         self.dataset = dataset
-        self.framework = framework
 
-    def compress(self) -> torch.nn.Module | tf.keras.Model:
+    def compress(self) -> torch.nn.Module:
         """
         Run the compression pipeline.
 
@@ -57,4 +55,4 @@ class EvoLite:
             rate: Fraction of weights/neurons to prune.
         """
         pruning = Pruning(target=target, rate=rate)
-        self.model = pruning.apply(self.model, self.framework)
+        self.model = pruning.apply(self.model)
